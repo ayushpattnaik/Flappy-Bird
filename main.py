@@ -12,9 +12,9 @@ SCREEN=pygame.display.set_mode((SCREENWIDTH,SCREENHEIGHT))
 GROUNDY=SCREENHEIGHT*0.6
 GAME_SPRITES={}
 GAME_SOUNDS={}
-PLAYER='/Gallery/Sprites/bird.png'
-BACKGROUND='/Gallery/Sprites/bg.png'
-PIPE='/Gallery/Sprites/pipe.png'
+PLAYER='Gallery/Sprites/bird.png'
+BACKGROUND='Gallery/Sprites/bg.jpg'
+PIPE='Gallery/Sprites/pipe.png'
 
 def welcomeScreen():
     pass
@@ -35,7 +35,7 @@ def welcomeScreen():
                 SCREEN.blit(GAME_SPRITES['background'],(0,0))
                 SCREEN.blit(GAME_SPRITES['player'],(playerx,playery))
                 SCREEN.blit(GAME_SPRITES['message'],(messagex,messagey))
-                SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY)) 
+               # SCREEN.blit(GAME_SPRITES['base'],(basex,GROUNDY)) 
                 pygame.display.update()
                 FPSCLOCK.tick(FPS)
 def mainGame():
@@ -49,18 +49,21 @@ if __name__ == '__main__':
     FPSCLOCK=pygame.time.Clock()
     pygame.display.set_caption('Flappy Bird')
     GAME_SPRITES['numbers']=(
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
-        pygame.image.load('').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/1.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/2.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/3.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/4.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/5.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/6.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/7.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/8.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/9.png').convert_alpha(),
+        pygame.image.load('Gallery/Sprites/0.png').convert_alpha(),
+
 
 
     )
-    GAME_SPRITES['base']=pygame.image.load('').convert_alpha()
+   # GAME_SPRITES['base']=pygame.image.load('Gallery/Sprites/base.png').convert_alpha()
     GAME_SPRITES['pipe']=(
         pygame.transform.rotate(PIPE,180),
         pygame.image.load(PIPE).convert_alpha()
@@ -73,7 +76,7 @@ if __name__ == '__main__':
     GAME_SOUNDS['swoosh']=pygame.mixer.Sound('');
     GAME_SOUNDS['wing']=pygame.mixer.Sound(''); 
     
-    GAME_SPRITES['message'] =pygame.image.load('').convert_alpha()
+    #GAME_SPRITES['message'] =pygame.image.load('').convert_alpha()
     GAME_SPRITES['background']=pygame.image.load(BACKGROUND).convert()
     GAME_SPRITES['player']=pygame.image.load(PLAYER).convert_alpha()
 
