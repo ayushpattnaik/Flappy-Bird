@@ -49,6 +49,7 @@ if __name__ == '__main__':
     FPSCLOCK=pygame.time.Clock()
     pygame.display.set_caption('Flappy Bird')
     GAME_SPRITES['numbers']=(
+        
         pygame.image.load('Gallery/Sprites/1.png').convert_alpha(),
         pygame.image.load('Gallery/Sprites/2.png').convert_alpha(),
         pygame.image.load('Gallery/Sprites/3.png').convert_alpha(),
